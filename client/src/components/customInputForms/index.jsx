@@ -4,7 +4,7 @@ import './style.css';
 
 const Input = (props) => {
   const {
-    type, placeholder, name, handleInput,
+    type, placeholder, name, handleInput, value,
   } = props;
 
   return (
@@ -12,7 +12,10 @@ const Input = (props) => {
       type={type}
       placeholder={placeholder}
       name={name}
-      onChange={(e) => handleInput(e.target.value)}
+      value={value}
+      className="custom-input-form col-lg-8 col-12"
+      onChange={(e) => handleInput(e)}
+      required
     />
   );
 };
@@ -22,10 +25,12 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,
   handleInput: PropTypes.func.isRequired,
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
   placeholder: 'Enter text',
+  value: '',
 };
 
 export default Input;

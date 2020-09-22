@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding: 24px;
 }
 
 .registration-wrapper h1{
@@ -19,4 +20,11 @@
     font-weight: 500;
     color: #84817a;
     text-align: center;
+}
+
+.registration-wrapper form{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
